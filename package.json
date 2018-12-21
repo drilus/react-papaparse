@@ -72,5 +72,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "papaparse": "^4.6.2"
+  }
 }
