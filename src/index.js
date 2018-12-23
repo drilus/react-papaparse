@@ -1,6 +1,1 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-export default class ReactPapaparse extends Component {
-  
-}
+export { default as CSVReader } from './CSVReader'

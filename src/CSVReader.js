@@ -6,15 +6,17 @@ import PapaParse from 'papaparse'
 export default class CSVReader extends Component {
   static propTypes = {
     onFileLoaded: PropTypes.func.isRequired,
-    inputRef: PropTypes.object.isRequired,
-    parserOptions: PropTypes.object,
+    onError: PropTypes.func,
+    inputRef: PropTypes.object,
+    configOptions: PropTypes.object,
     style: PropTypes.object
   }
 
   handleChangeFile = (e) => {
     const {
       onFileLoaded,
-      parserOptions = {}
+      onError,
+      configOptions = {}
     } = this.props
 
     const reader = new window.FileReader()
@@ -23,8 +25,8 @@ export default class CSVReader extends Component {
     reader.onload = (event) => {
       const csvData = PapaParse.parse(
         event.target.result,
-        Object.assign(parserOptions, {
-          error: err => (console.log(err))
+        Object.assign(configOptions, {
+          error: onError
         })
       )
       onFileLoaded(csvData.data, filename)
