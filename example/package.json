@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-papaparse": "file:///home/bunlong/workspace/os/Bunlong/react-papaparse",
+    "react-papaparse": "^1.0.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
