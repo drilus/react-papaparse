@@ -23,19 +23,19 @@
 
 react-papaparse is available on npm. It can be installed with the following command:
 
-```javascript
+```
 npm install --save react-papaparse
 ```
 
 react-papaparse is available on yarn as well. It can be installed with the following command:
 
-```javascript
+```
 yarn add react-papaparse
 ```
 
 ## Usage
 
-```
+```javascript
 import React, { Component } from 'react';
 
 import { CSVReader } from 'react-papaparse';
