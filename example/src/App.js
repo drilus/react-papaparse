@@ -13,6 +13,10 @@ class App extends Component {
     console.log(data);
   }
 
+  handleOnError = (err, file, inputElem, reason) => {
+    console.log(err);
+  }
+
   handleImportOffer = () => {
     this.fileInput.current.click();
   }
@@ -24,6 +28,7 @@ class App extends Component {
           onFileLoaded={this.handleReadCSV}
           inputRef={this.fileInput}
           style={{display: 'none'}}
+          onError={this.handleOnError}
         />
         <button onClick={this.handleImportOffer}>Import</button>
       </div>

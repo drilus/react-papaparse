@@ -1,7 +1,5 @@
 # react-papaparse
 
-<!--
-
 > Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input for using with React.
 
 [![NPM](https://img.shields.io/npm/v/react-papaparse.svg)](https://www.npmjs.com/package/react-papaparse) [![Build Status](https://travis-ci.com/transitive-bullshit/react-papaparse.svg?branch=master)](https://travis-ci.com/transitive-bullshit/react-papaparse) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -39,7 +37,6 @@ yarn add react-papaparse
 
 ```
 import React, { Component } from 'react';
-import React, { Component } from 'react';
 
 import { CSVReader } from 'react-papaparse';
 
@@ -53,6 +50,10 @@ class App extends Component {
     console.log(data);
   }
 
+  handleOnError = (err, file, inputElem, reason) => {
+    console.log(err);
+  }
+
   handleImportOffer = () => {
     this.fileInput.current.click();
   }
@@ -64,6 +65,7 @@ class App extends Component {
           onFileLoaded={this.handleReadCSV}
           inputRef={this.fileInput}
           style={{display: 'none'}}
+          onError={this.handleOnError}
         />
         <button onClick={this.handleImportOffer}>Import</button>
       </div>
@@ -87,5 +89,3 @@ export default App;
 ## License
 
 MIT © [Bunlong](https://github.com/Bunlong)
-
--->
