@@ -1,6 +1,6 @@
 {
   "name": "react-papaparse",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input for using with React.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
