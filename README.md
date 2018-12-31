@@ -8,15 +8,19 @@
 
 - Easy to use
 - One of the only parsers that correctly handles line-breaks and quotations
-- Stream large files
 - Read CSV to Array
 - Integration to get files from `<input type="file">` using `inputRef`
 
 ## Road map
 
-- Read JSON to CSV
-- Reverse parsing (converts JSON to CSV)
-- Worker threads to keep your web page reactive
+- Read JSON to CSV and CSV to JSON  
+- Auto-detect delimiter
+- Download remote files
+- Stream local and remote files ( large files )
+- Multi-threaded
+- Header row support
+- Type conversion
+- Skip commented lines
 - Pause, resume, abort
 
 ## Install
