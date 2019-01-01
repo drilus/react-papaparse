@@ -10,7 +10,7 @@
 - One of the only parsers that correctly handles line-breaks and quotations
 - Read CSV to JSON
 - Integration to get files from `<input type="file">` using `inputRef`
-- [Header row support][Header row support]
+- [Header row support](#header-row-support)
 
 ## Road map
 
