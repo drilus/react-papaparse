@@ -9,15 +9,16 @@
 - Easy to use
 - One of the only parsers that correctly handles line-breaks and quotations
 - Read CSV to JSON
+- Fast mode by default
 - Integration to get files from `<input type="file">` using `inputRef`
 - [Header row support](#header-row-support)
 
 ## Road map
 
+- Multi-threaded
 - Auto-detect delimiter
 - Download remote files
 - Stream local and remote files ( large files )
-- Multi-threaded
 - Type conversion
 - Skip commented lines
 - Pause, resume, abort
