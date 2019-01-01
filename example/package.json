@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-papaparse": "^1.0.3",
+    "react-papaparse": "file:..",
     "react-scripts": "2.1.1"
   },
   "scripts": {

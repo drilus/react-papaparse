@@ -23,13 +23,15 @@ export default class CSVReader extends Component {
     const filename = e.target.files[0].name
 
     reader.onload = (event) => {
-      const csvData = PapaParse.parse(
+      PapaParse.parse(
         event.target.result,
         Object.assign(configOptions, {
-          error: onError
+          error: onError,
+          complete: function(results) {
+            onFileLoaded(results, filename)
+          }
         })
       )
-      onFileLoaded(csvData.data, filename)
     }
 
     reader.readAsText(e.target.files[0])

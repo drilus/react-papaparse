@@ -8,20 +8,20 @@
 
 - Easy to use
 - One of the only parsers that correctly handles line-breaks and quotations
-- Read CSV to Array
+- Read CSV to JSON
 - Integration to get files from `<input type="file">` using `inputRef`
+- [Header row support][Header row support]
 
 ## Road map
 
-- Read JSON to CSV and CSV to JSON  
 - Auto-detect delimiter
 - Download remote files
 - Stream local and remote files ( large files )
 - Multi-threaded
-- Header row support
 - Type conversion
 - Skip commented lines
 - Pause, resume, abort
+- Read JSON to CSV
 
 ## Install
 
@@ -78,6 +78,18 @@ class App extends Component {
 }
 
 export default App;
+```
+
+### Header row support
+
+```javascript
+<CSVReader
+  onFileLoaded={this.handleReadCSV}
+  inputRef={this.fileInput}
+  style={{display: 'none'}}
+  onError={this.handleOnError}
+  configOptions={{header: true /* Header row support */ }}
+/>
 ```
 
 ## APIs

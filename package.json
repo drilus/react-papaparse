@@ -28,7 +28,8 @@
     "thread",
     "threading",
     "multi-thread",
-    "multi-threaded"
+    "multi-threaded",
+    "preact"
   ],
   "homepage": "https://github.com/themodernjavascript/react-papaparse.git",
   "main": "dist/index.js",

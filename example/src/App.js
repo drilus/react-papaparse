@@ -29,6 +29,7 @@ class App extends Component {
           inputRef={this.fileInput}
           style={{display: 'none'}}
           onError={this.handleOnError}
+          configOptions={{header: true /* Read JSON to CSV */ }}
         />
         <button onClick={this.handleImportOffer}>Import</button>
       </div>
