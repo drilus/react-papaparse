@@ -7,18 +7,17 @@
 ## Features
 
 - Easy to use
+- Multi-threaded
 - One of the only parsers that correctly handles line-breaks and quotations
 - Read CSV to JSON
 - Fast mode by default
 - Integration to get files from `<input type="file">` using `inputRef`
 - [Header row support](#header-row-support)
+- [Stream](#stream)
 
 ## Road map
 
-- Multi-threaded
 - Auto-detect delimiter
-- Download remote files
-- Stream local and remote files ( large files )
 - Type conversion
 - Skip commented lines
 - Pause, resume, abort
@@ -83,6 +82,8 @@ export default App;
 
 ### Header row support
 
+If you tell react-papaparse there is a header row, each row will be organized by field name instead of index.
+
 ```javascript
 <CSVReader
   onFileLoaded={this.handleReadCSV}
@@ -90,6 +91,25 @@ export default App;
   style={{display: 'none'}}
   onError={this.handleOnError}
   configOptions={{header: true /* Header row support */ }}
+/>
+```
+
+### Stream
+
+That's what streaming is for. Specify a step callback to receive the results row-by-row. This way, you won't load the whole file into memory and crash the browser.
+
+```javascript
+<CSVReader
+  onFileLoaded={this.handleReadCSV}
+  inputRef={this.fileInput}
+  style={{display: 'none'}}
+  onError={this.handleOnError}
+  configOptions={{
+    header: true,
+    step: function(row) { /* Header row support */
+      console.log("Row:", row.data);
+    },
+  }}
 />
 ```
 
