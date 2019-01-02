@@ -31,7 +31,7 @@ class App extends Component {
           onError={this.handleOnError}
           configOptions={{
             header: true,
-            step: function(row) { /* Header row support */
+            step: function(row) { /* Stream */
               console.log("Row:", row.data);
             },
           }}

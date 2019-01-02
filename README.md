@@ -106,7 +106,7 @@ That's what streaming is for. Specify a step callback to receive the results row
   onError={this.handleOnError}
   configOptions={{
     header: true,
-    step: function(row) { /* Header row support */
+    step: function(row) { /* Stream */
       console.log("Row:", row.data);
     },
   }}
